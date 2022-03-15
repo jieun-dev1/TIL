@@ -120,7 +120,7 @@ runtime Exception 은 예외가 발생할 것을 미리 감지하지 못했을 �
 
 throwsException() 메서드를 호출할 때는, try-catch 블록으로 해당 메서드를 감싸주어야만 한다. 
 
-![img.png](throwsEx.png)
+![img.png](img/throwsEx.png)
 
 throwsException 을 쓰면, 자체는 try-catch 문이 없다. 하지만 이 예외문을 호출할 때는 try catch 블록 안에서 써야한다.
 
@@ -198,7 +198,7 @@ public class CustomException {
 	}
 }
 ```
-![img.png](img.png)
+![img.png](img/ch14Exception.png)
 
 MyException 클래스가 상속을 받지 않는다면,
 
@@ -216,7 +216,7 @@ public class MyException { // extends Exception {
 
 
 ```
-![img_1.png](img_1.png)
+![img_1.png](img/MyException.png)
 
 Unresolved compilation problems:
 No exception of type MyException can be thrown; an exception type must be a subclass of Throwable

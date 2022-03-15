@@ -130,7 +130,7 @@ while(x<3){
 
 12. 접근 제어자 
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 
 13. 인터페이스, ABSTRACT, CLASS 의 차이.
 

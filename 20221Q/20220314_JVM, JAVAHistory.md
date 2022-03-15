@@ -14,7 +14,7 @@ javac 명령어를 수행하면, class 파일(byte 코드)이 만들어진다.
 여기서 컴퓨터가 이해할 수 있도록 다시 변환하는 게 필요하다 (byte 코드는 기계어가 아니기 때문에 os 에서 바로 실행되지 않는다) 
 이 변환 작업을 JIT 컴파일러에서 한다 (jvm-> 기계코드 과정)
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 3.JVM이란
 
@@ -28,7 +28,7 @@ Java7부터는 공식적으로 사용할 수 있는 G1 (Garvage 1st)라는 가�
 
 
 JVM의 구성
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 
 (1)ClassLoader
 .java 소스를 컴파일하면 .class 파일(바이트 코드 생성)
@@ -62,7 +62,7 @@ Native Method Stack: 자바외 언어로 작성된 네이티브 코드를 위한
 
 힙의 구성 
 
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 - Young: 젊은 객체
   (1) Eden: 객체가 여기에서 생성됨 저장됨 (2) Survivor: Eden이 꽉 차면, 살아있는 객체만 Survivor로 복사됨. survivor 이 꽉 차면, 다른 survivor2 영역으로 객체가 복사됨. eden 영역에서 살아있는 객체들도 다른 survivor 2로 감.
@@ -73,7 +73,7 @@ Native Method Stack: 자바외 언어로 작성된 네이티브 코드를 위한
 - Perm: 클래스, 메서드에 대한 정보를 보관함. 
 
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 추가 질문 
 ### **🤔메모리에 load 하고 heap stack 등 메모리 영역을 할당하는 것은 OS이다.하지만 어떻게 JVM이 runtime area를 자바 프로그램에게 할당할 수 있을까?**
