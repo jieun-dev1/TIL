@@ -68,6 +68,8 @@ extends 확장이나 implements 구현한 경우. 부모에 선언된 변수나 
 
 (3) 다형성
 
+다형성이 객체 지향의 핵심인 이유: 
+
 하나의 객체가 여러개의 자료형 타입을 가질 수 있다. 
 ```
 class Tiger extends Animal implements Predator, Barkable {
