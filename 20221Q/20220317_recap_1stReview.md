@@ -77,7 +77,8 @@ EX) Python, Ruby
    처음에는 참조 자료형의 언박싱 과정과 헷갈려서 두 번째 방식이 더 시간이 많이 걸리나? 했는데, 그건 기본 자료형과 참조 자료형을 비교했을 때의 경우다. 
    여기서의 핵심은 객체를 재사용하는지/새로 생성하는지의 차이이다. 
 
-8. String Buffer vs String Builder vs String 클래스의 차이 %%
+8. String Buffer vs String Builder vs String 클래스의 차이 
+
 String은 더하기 연산 시, 새로운 객체를 생성하고 기존 객체를 버린다 (gc 의 대상이다). 이는 메모리 낭비로 이어지기 때문에, 이러한 단점을 보완하려고 
 String Builder 와 Buffer 가 등장했다. 
 
