@@ -130,60 +130,7 @@ public class FinalReferenceType {
 }
 ```
 
-11. 인스턴스 변수와 클래스 변수의 차이 
 
-(1) 인스턴스 변수 vs 클래스 변수 
-
-인스턴스, 클래스 변수 모두 메소드 밖, 클래스 안에서 선언 된다.
-
-클래스 변수
--(static 예약어가 있는객체가 여러번 생성되어도 static 변수는 처음에 한 번만 생성되고 동일한 클래스의
-객체들에 의해서 공유가 된다. 다시 말해서 모든 객체가 하나의 값을 바라본다. B인스턴스에서 값을 변경하면, A인스턴스의 값도 바뀐다. 
-
-```
-public class Webtest {
-	static int sval = 123;
-
-	public static void main(String[] args) {
-		Webtest ex1 = new Webtest();
-		Webtest ex2 = new Webtest();
-		System.out.println(ex1.sval); // 123
-		ex2.sval = 321;
-		System.out.println(ex1.sval); // 321
-	}
-}
-//출처: https://ramees.tistory.com/16
-```
-
--GC 의 대상이 아니다. Heap area 가 GC 의 대상인데, 클래스 변수는 Method area 에 저장된다. 
--현업에서 Static 은 상수 등 제한 적으로 사용 한다 (정답이 있는 것은 아니다)
--인스턴스 생성할 필요 없이 함수 내 호출이 가능하다. 
-
-```
-public class Webtest {
-	static int sval = 123;
-
-	public static void main(String[] args) {
-		System.out.println(sval); // 123
-	}
-}
-```
-
-인스턴스 변수 
--객체 생성을 해야 사용 가능하다. new 로 객체가 생성 될 때마다, 매번 새로운 변수가 생성된다. 
--GC의 대상이다. 
-
-
-```
-public class Car {
-    int speed;
-    int distance; 
-    String color;
-}
-```
-
-(3) static method vs 일반 메서드? 
-객체를 생성하지 않고도 method를 쓸 수 있다. 단 클래스 변수만 사용 가능하다. 
 
 12. 오버 라이딩 vs 오버 로딩 
 오버 라이딩: 메소드 이름, 매개변수 타입/개수, 리턴타입 다 같아야 한다
@@ -202,15 +149,89 @@ public class Car {
 
 출처: https://junior-datalist.tistory.com/214
 
-14.
 
-자바 예외. 
+#멘토님 리뷰 리스트
+
+1. 인스턴스 변수와 클래스 변수의 차이
+
+(1) 인스턴스 변수 vs 클래스 변수
+
+인스턴스, 클래스 변수 모두 메소드 밖, 클래스 안에서 선언 된다.
+
+클래스 변수
+-(static 예약어가 있는객체가 여러번 생성되어도 static 변수는 처음에 한 번만 생성되고 동일한 클래스의
+객체들에 의해서 공유가 된다. 다시 말해서 모든 객체가 하나의 값을 바라본다. B인스턴스에서 값을 변경하면, A인스턴스의 값도 바뀐다.
+
+```
+public class Webtest {
+	static int sval = 123;
+
+	public static void main(String[] args) {
+		Webtest ex1 = new Webtest();
+		Webtest ex2 = new Webtest();
+		System.out.println(ex1.sval); // 123
+		ex2.sval = 321;
+		System.out.println(ex1.sval); // 321
+	}
+}
+//출처: https://ramees.tistory.com/16
+```
+
+-GC 의 대상이 아니다. Heap area 가 GC 의 대상인데, 클래스 변수는 Method area 에 저장된다.
+-현업에서 Static 은 상수 등 제한 적으로 사용 한다 (정답이 있는 것은 아니다)
+-인스턴스 생성할 필요 없이 함수 내 호출이 가능하다.
+
+```
+public class Webtest {
+	static int sval = 123;
+
+	public static void main(String[] args) {
+		System.out.println(sval); // 123
+	}
+}
+```
+
+인스턴스 변수
+-객체 생성을 해야 사용 가능하다. new 로 객체가 생성 될 때마다, 매번 새로운 변수가 생성된다.
+-GC의 대상이다.
+
+
+```
+public class Car {
+    int speed;
+    int distance; 
+    String color;
+}
+```
+
+(3) static method vs 일반 메서드?
+객체를 생성하지 않고도 method를 쓸 수 있다. 단 클래스 변수만 사용 가능하다.
+
+2. String name = "abc" vs String name = new String("abc")
+   이렇게 두 가지 선언방법의 차이는?
+
+문자열 리터럴은 "abc"의 주소가 저장된다(이미 존재하는 것 재사용하게 됨. 한번 생성하면, 내용 변경이 안되기 때문에, 같은 인스턴스를 공유하게 된다. 반면 new 를 생성하면, 항상 새로운 인스턴스가 생성된다. 
+문자열 리터럴은, 컴파일 시 클래스 파일에 저장된다. 클래스 파일이 클래스 로더에 의해서 메모리에 올라갈 때, 리터럴의 목록에 있는 리터럴들이 JVM 내의 CONSTANT POOL (상수 저장소)에 저장된다. 
+
+3. 접근 제어자는 각각 무엇이 있으며? 어떤 특성을 가질까요?
+
+4. 자바 예외. 
 예외 종류. 
-(1)unchecked exception (runtime): 
+프로그램 실행 시 발생할 수 있는 예외 발생에 대한 코드를 작성.
+예외 발생으로 프로그램이 비정상적으로 종료되는 것을 막기 위해. 
 
-(2) error: 
-
-
+(1) unchecked exception (runtime): 
+컴파일 시 체크해주지 않기 때문에 unchecked 라고 불린다. 실행 시에만 예외 발생 여부를 알 수 있다. 
+(2) error
+자바 프로그램 밖에서 발생한 예외. 
+에러는 프로세스에 영향을 미치고, 예외는 쓰레드에 영향을 미치다. 쓰레드가 상대적으로 덜 심각한 오류다. 
+Out Of Memory, stackoverflow 
 (3) checked exception: 
 
-
+5. 컴파일러가 최적화가 없다는 가정 하에, String 변수에 +를 반복하는 로직이 왜 나쁜지에 대해서 설명해주세요. 
+String은 immutale (변경 불가) 하다. 그렇기 떄문에, 한 번 생성된 string instance 가 갖고 있는 문자열은 읽어올수만 있고, 변경은 불가하다. 
+예를 들어서, + 연산자를 이용해서 문자열을 결합할 떄, 인스턴스 내의 문자열이 바뀌는 게 아니라, 새로운 문자열이 담긴 string 인스턴스가 생성됨
++를 사용해서 문자열을 결합하면, 매 연산 마다 새로운 문자열을 가진 string instance 가 생성되서 메모리 공간을 차지한다. 
+그렇기 때문에 결합 횟수를 줄이는 게 중요한데, 
+문자열 간의 결합, 추출 등 문자열을 다루는 작업이 많이 필요할 때는 String 클래스 대신 StringBuffer 를 쓰는게 좋다. StringBuffer 인스턴스에 저장된 문자열은 변경이 가능해서, 
+하나의 인스턴스 만으로 문자열을 다룰 수 있다. 

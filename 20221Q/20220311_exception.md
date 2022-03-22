@@ -2,10 +2,12 @@
 
 예외처리는 한 번에 이해하려고 하기보다는, 가볍게 훑고 한번 더 보자. 
 
-예외가 발생하여 catch 블록이 실행된다고 해서, try 블록 내에 실행된 모든 문장이 무시되는 것은 아니다. 
-위의 예제에서 예외는 intArray[5] 를 호출하는 순간 발생한다 checkVariable3() 의 intArray[5]. 
-그렇기 때문에, int[] intArray = new int[5]; 는 문제 없이 실행된다. 
-catch 에서 사용하는 변수는 try블록 앞에 선언되어야 한다. 
+모든 예외의 부모 클래스는 java.lang.Exception 
+
+예외가 발생하여 catch 블록이 실행된다고 해서, try 블록 내에 실행된 모든 문장이 무시되는 것은 아니다.
+checkVariable3() 예제에서 예외는 intArray[5] 를 호출하는 순간 발생한다 
+그렇기 때문에, 그 이전의 코드인 int[] intArray = new int[5]; 는 문제 없이 실행된다. 
+catch 에서 사용하는 변수는 try블록 내부가 아닌, 앞에 선언되어야 한다. 
 
 ```
 public class ExceptionVariable {
@@ -52,6 +54,8 @@ public class ExceptionVariable {
 
 ```
 
+![img_12.png](tryCatch.png)
+
 finally는 try/catch 여부에 상관 없이 일어난다. 
 
 ```
@@ -78,6 +82,7 @@ public class FinallySample {
 }
 
 ```
+![img_12.png](finally.png)
 
 ```
 public class MultiCatchSample {
@@ -103,20 +108,40 @@ public class MultiCatchSample {
 ```
 위와 같이 처리할 경우, ArrayIndexOutOfBoundsException 에서 already handled by catch block exception.
 모든 예외의 부모 클래스는 java.lang.Exception 이기 때문에, 이미 Exception 이 처리해줬는데- 하면서 컴파일 에러를 터트리는 것이다. 
-Exception 클래스로 catch 하는 것을 가장 아래에 추가하는 것을 권장한다. 
+Exception 클래스로 catch 하는 것을 가장 아래에 추가하는 것을 권장한다. 모든 예외 클래스의 부모는 Exception 이다. catch() 에 Exception 
+타입의 참조 변수를 선언해놓으면, 어떤 종류의 예외가 발생하더라도 이 catch 블록에 의해 처리된다. 
 
-try/catch 처리에서 기억할 것. 
--try 다음에 오는 catch 블록은 한 개 이상 올 수 없음. 
+try/catch 문의 흐름
+
+(1) try 블럭 내에서 예외 발생
+- 발생한 예외와 관련이 있는 catch 블록을 찾아서 실행한다.
+-일치 catch 블록을 찾음, catch 블록 내의 문장을 실행. 전체 try-catch 문 빠져나가서 다음 문장 계속 수행함. 
+일치하는 catch 블록을 찾지 못할 경우, 예외는 처리되지 못한다.
+
+(2) try 블럭 내에서 예외 발생 x
+
+catch 블록 거치지 않고, try-catch 를 빠져나가서 수행 계속함. 
+
+참고
+- try 다음에 오는 catch 블록은 한 개 이상 올 수 o. 
 -먼저 선언한 catch 블록의 예외 클래스가 다음에 선언한 catch 블록의 부모에 속하면, 자식에 속하는 catch 블록은 절대 실행될 
 일이 없기 때문에 컴파일 되지 않는다. 
--하나의 try 블록에서 예외가 발생하면 그 예외와 관련이 있는 catch 블록을 찾아서 실행한다. 
 
 3가지 타입의 예외
 (1) error: 자바 프로그램 밖에서 발생한 예외. 오류의 이름이 Error 로 끝나면 에러고 Exception 으로 끝나면 예외다. 
 에러는 프로세스에, exception은 쓰레드에만 영향을 준다.
+
 (2) runtime Exception (unchecked)
 runtime Exception 은 예외가 발생할 것을 미리 감지하지 못했을 때 발생함. 
-컴파일 시에는 발생하지 않지만, 실행시에 발생하는 예외. 컴파일 시에 체크를 하지 않기 때문에 unchecked 라고도 불림. 
+컴파일 시에는 발생하지 않지만, 실행시에 발생하는 예외. 컴파일 시에 체크를 하지 않기 때문에 unchecked 라고도 불림.
+프로그래머의 실수로 인해 발생하기 때문에, 예외처리가 강제되지 않는다. 
+
+(3) checked Exception: 
+반드시 예외처리를 해줘야 함. 예외 처리가 불 필요한 경우에도 try-catch 문을 넣어서 복잡해짐. 
+그래서 요즘에는 예외처리를 선택적으로 할 수 있도록 runtime Exeption을 상속받아서 작성하는 경우가 많다. 
+
+
+try catch 문 외에, throws 를 쓰는 방법도 있다.
 
 throwsException() 메서드를 호출할 때는, try-catch 블록으로 해당 메서드를 감싸주어야만 한다. 
 
@@ -224,6 +249,16 @@ The method printStackTrace() is undefined for the type MyException
 
 예외 클래스 타입을 임의로 만들 때는 반드시 Throwable 의 직계 자손 클래스들을 상속받아 (extends) 만들어야 한다. 
 exception 타입은 Throwable 의 subclass(하위클래스 혹은 직계 자손) 즉, Exception 이어야 한다(그러니 exception은 상속받는 것이다)
+
+
+에러메시지 확인을 도와주는 메서드 
+
+-printStackTrace()
+첫줄: 예외 메시지 
+두번째 줄: 예외 발생한 메소드 들의 호출 관계(스택 트레이스)
+-getMessage() 
+
+예외 메시지를 string 형태로 리턴. toString()은 getMessage 보다는 자세하다. 
 
 정리 
 
