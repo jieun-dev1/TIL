@@ -131,15 +131,23 @@ catch 블록 거치지 않고, try-catch 를 빠져나가서 수행 계속함.
 (1) error: 자바 프로그램 밖에서 발생한 예외. 오류의 이름이 Error 로 끝나면 에러고 Exception 으로 끝나면 예외다. 
 에러는 프로세스에, exception은 쓰레드에만 영향을 준다.
 
+ex. stackoverflow, outof memory -> 발생하면 복구할 수 없음. 에러는 프로그램의 비정상적인 종료를 막을 길이 없음.
+
+예외: 프로그램 밖에서 발생. 수습될 수 있는 비교적 덜 심각한 것. 비정상 적인 종료 막을 수 있음 (catch에 적절한 코드 대응)
+
 (2) runtime Exception (unchecked)
 runtime Exception 은 예외가 발생할 것을 미리 감지하지 못했을 때 발생함. 
 컴파일 시에는 발생하지 않지만, 실행시에 발생하는 예외. 컴파일 시에 체크를 하지 않기 때문에 unchecked 라고도 불림.
 프로그래머의 실수로 인해 발생하기 때문에, 예외처리가 강제되지 않는다. 
 
+ex. NullPointerException, IndexOutOfBoundsException
+
 (3) checked Exception: 
+unchecked 가 아닌 모든 exception. 
 반드시 예외처리를 해줘야 함. 예외 처리가 불 필요한 경우에도 try-catch 문을 넣어서 복잡해짐. 
 그래서 요즘에는 예외처리를 선택적으로 할 수 있도록 runtime Exeption을 상속받아서 작성하는 경우가 많다. 
 
+ex.IOException, SQLException 등. 
 
 try catch 문 외에, throws 를 쓰는 방법도 있다.
 
