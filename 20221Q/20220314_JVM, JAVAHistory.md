@@ -99,8 +99,10 @@ GC 는 어떻게 동작하는가?
 ![img_6.png](img/img_6.png)
 
 - Young: 젊은 객체
-  (1) Eden: 객체가 여기에서 생성됨 저장됨 
-  (2) Survivor: Eden이 꽉 차면, 살아있는 객체만 Survivor로 복사됨 (minor GC) survivor 이 꽉 차면, 다른 survivor2 영역으로 객체가 복사됨. 
+  
+(1) Eden: 객체가 여기에서 생성됨 저장됨 
+  
+(2) Survivor: Eden이 꽉 차면, 살아있는 객체만 Survivor로 복사됨 (minor GC) survivor 이 꽉 차면, 다른 survivor2 영역으로 객체가 복사됨. 
 eden 영역에서 살아있는 객체들도 survivor2로 감. 이 과정에서 SURVIVOR 영역은 둘 중 한쪽만 사용되어야 함. 두 SURVIVOR 에 모두 데이터가 존재하거나 둘다 0이어서는 안됨. 
   -> MINOR, YOUNG GC 
 
