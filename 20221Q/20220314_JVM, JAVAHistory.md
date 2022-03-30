@@ -1,5 +1,5 @@
 1. 
-자바 설치 시, JDK 와 JRE 로 분리된다. jre 는 실행만을 위한 환경이다. 
+자바 설치 시, JDK 와 JRE 로 분리된다. jre 는 실행만을 위한 환경이다 (JavaAPI 와 JVM 포함)
 JRE에는 JAVAC 등 자바를 컴파일하는 프로그램은 포함되어 있지 않다. 
 
 
@@ -43,9 +43,11 @@ https://velog.io/@outgrow0905
 자바 가상 머신: 작성한 자바 프로그램이 수행되는 프로세스.
 java 라는 명령어를 통해서 애플리케이션이 수행되면, JVM 위에서 애플리케이션이 동작함. 
 JVM은 작성한 프로그램을 찾고 실행함 + 자바 메모리 관리도 해줌. 
+JVM은 자바언어를 모르고, Binary(class file format - byte code)만 이해한다. 
+
 
 JVM의 구성
-![img_9.png](img/img_9.png)
+![JVMORACLE.PNG](img/JVMORACLE.PNG)
 
 (1)ClassLoader
 
@@ -65,18 +67,20 @@ GC 역할을 하는 시간이 정확히 언제인지는 알 수 없음. GC 수�
 (4) Runtime Data Area
 
 JVM이 프로그램을 수행하기 위해 OS로 부터 별도로 할당 받은 메모리 영역. 자바 애플리케이션 실행 시 사용하는 데이터를 적재함.
+Heap과 메서드는 JVM 이 시작될 때, 생성된다. 
 
 Method area:
 - 메소드 영역에서 자바 프로그램의 클래스 코드, 변수 코드, static, final 변수 등이 생성된다.
 
 heap area:
 - new 키워드로 생성한 객체가 저장되는 영역
-- 동적으로 생성된 객체와 배열이 저장되는 곳으로 Garbage Collection의 대상이 되는 영역이다.
+- 동적으로 생성된 객체와 배열이 저장되는 곳으로(?) Garbage Collection의 대상이 되는 영역이다.
+- Heap은 동적인 메모리 영역이다. 
 - 
 stack area:
 - 지역 변수, 파라미터 등이 생성되는 영역, 동적으로 객체를 생성하면 실제 객체는 Heap에 할당되고 해당 레퍼런스만 Stack에 저장된다.
 - Stack은 스레드별로 독자적으로 가진다.
-- Heap에 있는 객체가 Stack에서 참조 할 수 없는 경우 GC의 대상이 된다.
+- Heap에 있는 객체가 Stack에서 참조 할 수 없는 경우 (stack 에서 가리키는 객체가 변경되었다던지) GC의 대상이 된다.
 
 
 PC Register: 
@@ -85,18 +89,24 @@ PC Register:
 
 Native Method Stack: 
 
-- 자바외 언어로 작성된 네이티브 코드를 위한 메모리 영역
+- 자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역
 
 *힙 영역이 중요한 이유: gc의 주요 대상이기 때문이다.
 
 *Garvage Collector: 메모리 해제 작업을 하는 C와 달리, JVM 내에서 메모리 관리를 해줌 (Garbage Collection: jvm 힙 영역에서 사용하지 않는 객체를 삭제하는 프로세스)
 Java7부터는 공식적으로 사용할 수 있는 G1 (Garvage 1st)라는 가비지 컬렉터를 제외한 나머지 jvm 은 다음과 같이 영역을 나누어 힙이라는 공간에 객체들을 관리한다. 
 
+
+##GC 
+
 GC 는 어떻게 동작하는가? 
+영상 참고: https://www.youtube.com/watch?v=Fe3TVCEJhzo
 
 힙의 구성 
 
 ![img_6.png](img/img_6.png)
+
+permanent 가 사라지면서 JVM 에서는 PERM 을 MetaSpace가 대체한다. 
 
 - Young: 젊은 객체
   
@@ -105,8 +115,10 @@ GC 는 어떻게 동작하는가?
 (2) Survivor: Eden이 꽉 차면, 살아있는 객체만 Survivor로 복사됨 (minor GC) survivor 이 꽉 차면, 다른 survivor2 영역으로 객체가 복사됨. 
 eden 영역에서 살아있는 객체들도 survivor2로 감. 이 과정에서 SURVIVOR 영역은 둘 중 한쪽만 사용되어야 함. 두 SURVIVOR 에 모두 데이터가 존재하거나 둘다 0이어서는 안됨. 
   -> MINOR, YOUNG GC 
+age 가 1 증가한다. 
 
-- Old: 늙은, 오래 살아있는 객체들은 old 영역으로 이동함. 지속적으로 이동하다가 old 영역이 꽉 차면 GC 발생. 이를 Major/full GC 라고 부름.
+- Old: 늙은, 오래 살아있는 객체들은(AGE 가 AGE Threshold 에 도달하면) old 영역으로 이동함(promotion). 
+- 지속적으로 이동하다가 old 영역이 꽉 차면 GC 발생. 이를 Major/full GC 라고 부름.
 - Perm: 클래스, 메서드에 대한 정보를 보관함. 
 
 
@@ -126,6 +138,9 @@ GC 는 언제 동작하는가?
 ![img_8.png](img/img_8.png)
 
 
+GC가 발생하거나 객체가 각 영역에서 다른 영역으로 이동할 때, 애플리케이션의 병목이 발생하면서 성능에 영향을 주게 된다. 
+그래서 핫스팟 jvm 에서는 스레드 로컬 할당 버퍼를 사용한다. 
+스레드 별 메모리 버퍼를 사용하면, 다른 스레드에 영향 주지 않는 메모리 할당 작업이 가능해져서 그런다. 
 ## 추가 질문 
 
 "자바는 운영체제에는 독립적이지만, JVM 은 운영체제에 독립적이다."
