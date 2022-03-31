@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c33f5949-622f-47b8-b31b-015f3d779eae" name="Changes" comment="TIL 업데이트" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="temp" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="269FxMH9jjEi8Ar8xZnYU7hSeQc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/20221Q/img" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\devTeamProject\TIL\20221Q\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\devTeamProject\TIL\20221Q\img" />
+      <recent name="C:\Users\USER\Desktop\devTeamProject\TIL\20221Q" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c33f5949-622f-47b8-b31b-015f3d779eae" name="Changes" comment="" />
+      <created>1646828141381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646828141381</updated>
+      <workItem from="1646828144281" duration="15613000" />
+      <workItem from="1647141820446" duration="59239000" />
+      <workItem from="1647486306012" duration="9753000" />
+      <workItem from="1647498368532" duration="107323000" />
+      <workItem from="1648094333088" duration="2886000" />
+      <workItem from="1648109193380" duration="33811000" />
+      <workItem from="1648544434026" duration="33134000" />
+      <workItem from="1648706677250" duration="3017000" />
+    </task>
+    <task id="LOCAL-00001" summary="TIL">
+      <created>1646829722817</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646829722819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TIL 10일">
+      <created>1646907577240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646907577240</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TIL">
+      <created>1647165056752</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647165056752</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CHAPTER 1 총정리">
+      <created>1647249438509</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647249438509</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TIL">
+      <created>1647268117922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647268117922</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TIL 업데이트 + 이미지 폴더 구조에 정리">
+      <created>1647327928270</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647327928270</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TIL 업데이트">
+      <created>1647349525925</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647349525925</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TIL 업데이트">
+      <created>1647353064999</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647353064999</updated>
+    </task>
+    <task id="LOCAL-00009" summary="TIL 업데이트">
+      <created>1647421539666</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647421539666</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TIL 업데이트">
+      <created>1647421597514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647421597514</updated>
+    </task>
+    <task id="LOCAL-00011" summary="TIL 업데이트">
+      <created>1647508785770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1647508785770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="TIL 업데이트">
+      <created>1647602521320</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1647602521320</updated>
+    </task>
+    <task id="LOCAL-00013" summary="TIL 업데이트">
+      <created>1647615837010</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1647615837010</updated>
+    </task>
+    <task id="LOCAL-00014" summary="TIL 업데이트">
+      <created>1647748347079</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1647748347079</updated>
+    </task>
+    <task id="LOCAL-00015" summary="TIL 업데이트">
+      <created>1647873350923</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1647873350923</updated>
+    </task>
+    <task id="LOCAL-00016" summary="TIL 업데이트">
+      <created>1647949431062</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1647949431062</updated>
+    </task>
+    <task id="LOCAL-00017" summary="TIL 업데이트">
+      <created>1648025814748</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648025814748</updated>
+    </task>
+    <task id="LOCAL-00018" summary="TIL 업데이트">
+      <created>1648108118273</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108118273</updated>
+    </task>
+    <task id="LOCAL-00019" summary="TIL 업데이트">
+      <created>1648108343614</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108343614</updated>
+    </task>
+    <task id="LOCAL-00020" summary="TIL 업데이트">
+      <created>1648108431718</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108431718</updated>
+    </task>
+    <task id="LOCAL-00021" summary="TIL 업데이트">
+      <created>1648110769860</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1648110769860</updated>
+    </task>
+    <task id="LOCAL-00022" summary="TIL 업데이트 24일">
+      <created>1648111531254</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1648111531254</updated>
+    </task>
+    <task id="LOCAL-00023" summary="TIL 업데이트 24일">
+      <created>1648292023938</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1648292023938</updated>
+    </task>
+    <task id="LOCAL-00024" summary="TIL 업데이트">
+      <created>1648306542410</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1648306542410</updated>
+    </task>
+    <task id="LOCAL-00025" summary="TIL 업데이트">
+      <created>1648654514233</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1648654514233</updated>
+    </task>
+    <task id="LOCAL-00026" summary="TIL 업데이트">
+      <created>1648706089657</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1648706089657</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TIL 10일" />
+    <MESSAGE value="CHAPTER 1 총정리" />
+    <MESSAGE value="TIL" />
+    <MESSAGE value="TIL 업데이트 + 이미지 폴더 구조에 정리" />
+    <MESSAGE value="TIL 업데이트 24일" />
+    <MESSAGE value="TIL 업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="TIL 업데이트" />
+  </component>
+</project>
