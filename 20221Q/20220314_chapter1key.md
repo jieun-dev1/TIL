@@ -21,8 +21,11 @@ Book godOfJava = new Book(); // Book 은 클래스이고, 객체인 godOfJava는
 *new String(); 과 String str = " "; 의 차이점
 
 new String(); : 새로운 객체를 만들기 때문에 heap area 에 저장
+
 String str = " "; string constant pool 영역에 저장되어, 서로 참조하는 레퍼런스 주소가 다르다.
 (constant pool 은 heap area에 포함 되어 있는 공간이다)
+jdk 1.6전까지, runtime constant pool 은 method area 에 해당했다. 
+jdk 1.7이후로는 method 에서 heap memory로 이동했다. 
 
 ```
 String str1 = new String(""); // 4444
