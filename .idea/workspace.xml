@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c33f5949-622f-47b8-b31b-015f3d779eae" name="Changes" comment="TIL 업데이트" />
+    <list default="true" id="c33f5949-622f-47b8-b31b-015f3d779eae" name="Changes" comment="TIL 업데이트">
+      <change afterPath="$PROJECT_DIR$/20221Q/20220403_TIL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20221Q/G1HeapAllocation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20221Q/jvmreference.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221Q/20220323_2ndRecapp.md" beforeDir="false" afterPath="$PROJECT_DIR$/20221Q/20220323_2ndRecapp.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221Q/20220330_3rdRecapp.md" beforeDir="false" afterPath="$PROJECT_DIR$/20221Q/20220330_3rdRecapp.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221Q/img_2.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +82,7 @@
       <workItem from="1648094333088" duration="2886000" />
       <workItem from="1648109193380" duration="33811000" />
       <workItem from="1648544434026" duration="33134000" />
-      <workItem from="1648706677250" duration="9971000" />
+      <workItem from="1648706677250" duration="29626000" />
     </task>
     <task id="LOCAL-00001" summary="TIL">
       <created>1646829722817</created>
