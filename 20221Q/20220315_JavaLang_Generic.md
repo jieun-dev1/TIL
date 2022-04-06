@@ -6,6 +6,35 @@
 제네릭을 쓰면 instanceOf로 타입 점검을 할 필요가 없다. 실행 시 예외 발생 하는 게 아니라 컴파일 시 사전 점검이 가능해진다. 결과적으로 형변환의 안정성을 꾀할 수 있다. 
 제네릭을 사용할 때 <>안에 들어가는 타입은 기본적으로 어떤 타입이더라도 상관 없다. 
 
+기존에는 다양한 조율의 타입을 다루는 메서드의 매개변수, 리턴타입으로 Object 타입의 참조 변수를 사용했었다. 
+그로 인해 형변환이 불가피 했지만, 이제는 Object 타입 대신 원하는 타입을 지정하면 된다. 
+객체를 생성할 때는 참조변수와 생성자에 T 타입 대신 실제 타입 지정해야 한다. 
+예를 들어서, 
+
+```
+class Box<T> {
+    T item; 
+    
+    void setItem(T item) {
+        this.item = item; 
+    }
+    
+    T getItem() {
+        return item; 
+    }
+}
+
+```
+
+```
+
+Box<String> b = new Box<String>();
+String item = b.getItem(); //(String)이 생략 가능. 
+
+```
+
+참고: 자바의 정석 
+
 ```
 public class WildcardSample {
 
