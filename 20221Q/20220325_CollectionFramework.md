@@ -12,7 +12,7 @@ https://velog.io/@leobit/%EB%B3%B5%EC%9E%A1%EB%8F%84Complexity
 ### 배열 
 Array 와 
 ArrayList (ArrayList 와 LinkedList 는 리스트 인터페이스의 구현체지만, ArrayList는 여전히 배열의 특성을 많이 갖고 있다)
-
+Array는 가변적이지 x. ArrayList 는 내부에 grow 메서드가 있어서, 객체가 추가되어 저장용량을 추가한다면 자동으로 늘려준다. 
 ### 링크드 리스트
 링크드 리스트 클래스는 링크드 리스트가 아닌 더블 링크드 리스트로 구현되어 있다.
 더블 링크드 리스트는 링크드 리스트와 같고, 이전 요소에 대한 접근이 가능해서, 각 요소에 대한 접근/이동이 더 쉽다. 
