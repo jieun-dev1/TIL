@@ -38,6 +38,7 @@ https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC
 jvm 가상머신이 있으면, 한 번의 컴파일 만으로도 어디서든 읽고 실행 가능함. 
 다른 환경의 OS 나 CPU 구조와 상관 없이, 해당 OS 에 맞는 jvm 을 인스톨하는 과정만 하면, 
 다른 환경의 Byte 코드를 언제든지 읽어올 수 있음. (출처: https://yeon-kr.tistory.com/118)
+반면 c 는 다른 환경의 os 구조를 사용하는 환경에서는, 특정 os/cpu 구조를 사용하는 컴파일러에서 컴파일된 기계어를 읽을 수 없음. 
 
 https://techvu.dev/113 (jvm 구조, 실행 과정 참고)
 https://velog.io/@outgrow0905
